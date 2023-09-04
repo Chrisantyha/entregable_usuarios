@@ -76,7 +76,7 @@ function App() {
   return (
     <>
 
-      <button onClick={hadleChangeShowUser} className='bg-black p-2 rounded-md text-white' > Crear Usuario</button>
+      <button onClick={hadleChangeShowUser} className='bg-black p-2 rounded-md text-white' > New User</button>
       <UserForms 
       isShowUser={isShowUser} 
       hadleChangeShowUser={hadleChangeShowUser} 

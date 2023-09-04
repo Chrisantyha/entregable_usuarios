@@ -2,15 +2,19 @@ import React from 'react'
 
 const UserCard = ({user, deleteUser, handleClickUpdate}) => {
   return (
-    <article>
+    <article className=' bg-white grid grid-cols-2 flex flex-col space-y-4'>
         <ul>
-            <li>Nombre: {user.first_name}</li>
-            <li>Apellido: {user.last_name}</li>
-            <li>Email: {user.email}</li>
-            <li>Fecha de nacimiento: {user.birthday}</li>
+            <li className='font-bold capitalize'>{user.first_name} {user.last_name}</li>
+            
+            <li> 📪 {user.email}</li>
+            <li>🥧 {user.birthday}</li>
         </ul>
-        <button onClick={()=> deleteUser(user.id)} className='bg-black p-2 text-white rounded-md ' >Eliminar</button>
-        <button onClick={()=> handleClickUpdate(user)} className='bg-black p-2 text-white rounded-md ml-3' >Actualizar</button>
+        <section>
+
+        <button onClick={()=> deleteUser(user.id)} className='bg-white p-2  rounded-md ' >❌</button>
+        <button onClick={()=> handleClickUpdate(user)} className='bg-white p-2 text-white rounded-md ml-3' >✔</button>
+
+        </section>
     </article>
   )
 }   
